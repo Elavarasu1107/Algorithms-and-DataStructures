@@ -13,7 +13,13 @@ namespace AlgorithmsAndDataStructures
             string inputString = System.IO.File.ReadAllText(@"D:\BridgeLabz\Algorithms-and-DataStructures\AlgorithmsAndDataStructures\InputInteger.txt");
             string[] arrayOfString = inputString.Split(',');
             int[] array = arrayOfString.Select(int.Parse).ToArray();
+            Console.WriteLine("Before Sorting");
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i]+" ");
+            }
             int j;
+            Console.WriteLine("\nAfter Sorting");
             for (int i = 0; i < array.Length; i++)
             {
                 int temp = array[i];
