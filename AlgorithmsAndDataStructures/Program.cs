@@ -6,7 +6,7 @@ namespace AlgorithmsAndDataStructures
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Enter 1 for Permutation of String\n 2 for BinarySearch");
+            Console.WriteLine("Enter 1 for Permutation of String\n 2 for BinarySearch\n 3 for Insertion Sort");
             Console.WriteLine("Enter a Number");
             int userInput = Convert.ToInt32(Console.ReadLine());
 
@@ -22,6 +22,12 @@ namespace AlgorithmsAndDataStructures
                     {
                         BinarySearch getMethod = new BinarySearch();
                         getMethod.Main();
+                        break;
+                    }
+                case 3:
+                    {
+                        InsertionSort getMethod = new InsertionSort();
+                        getMethod.Sort();
                         break;
                     }
                 default:
