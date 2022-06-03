@@ -6,7 +6,7 @@ namespace AlgorithmsAndDataStructures
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Enter 1 for Permutation of String\n 2 for BinarySearch\n 3 for Insertion Sort\n 4 for Bubble Sort\n 5 for Merge Sort");
+            Console.WriteLine("Enter 1 for Permutation of String\n 2 for BinarySearch\n 3 for Insertion Sort\n 4 for Bubble Sort\n 5 for Merge Sort\n 6 for Anagram Checking");
             Console.WriteLine("Enter a Number");
             int userInput = Convert.ToInt32(Console.ReadLine());
 
@@ -46,6 +46,12 @@ namespace AlgorithmsAndDataStructures
                         Console.WriteLine("\nAfter Sorting");
                         getMethod.sort(array, 0, array.Length - 1);
                         getMethod.Print(array);
+                        break;
+                    }
+                case 6:
+                    {
+                        Anagram getMethod = new Anagram();
+                        getMethod.Detector();
                         break;
                     }
                 default:
