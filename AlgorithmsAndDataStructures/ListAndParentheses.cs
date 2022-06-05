@@ -127,4 +127,61 @@ namespace AlgorithmsAndDataStructures
             }
         }
     }
+    internal class BalancedParentheses<T> where T : IComparable
+    {
+        internal Node<T> top;
+        internal void Push(T data)
+        {
+            Node<T> newNode = new Node<T>(data);
+
+            if (top == null)
+            {
+                newNode.next = null;
+                Console.WriteLine(newNode.data + " is pushed onto the stack");
+            }
+            else
+            {
+                newNode.next = top;
+            }
+            top = newNode;
+        }
+        internal char Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return ' ';
+            }
+            if (top.data.CompareTo('(') == 0)
+            {
+                return '(';
+            }
+            return ' ';
+        }
+        internal void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine(top.data + " is popped from the stack");
+            top = top.next;
+        }
+        internal void Display()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.Write("The stack has : ");
+            Node<T> tempNode = top;
+            while (tempNode != null)
+            {
+                Console.WriteLine(tempNode.data);
+                tempNode = tempNode.next;
+            }
+        }
+    }
 }
