@@ -32,5 +32,32 @@ namespace AlgorithmsAndDataStructures
             }
             list.Display();
         }
+        public void OrderedList()
+        {
+            string inputString = System.IO.File.ReadAllText(@"D:\BridgeLabz\Algorithms-and-DataStructures\AlgorithmsAndDataStructures\InputInteger.txt");
+            string[] arrayOfString = inputString.Split(',');
+            int[] array = arrayOfString.Select(int.Parse).ToArray();
+            Lists<int> list = new Lists<int>();
+            Console.WriteLine("Data present in the list:");
+            foreach (int num in array)
+            {
+                list.OrderedList(num);
+                Console.Write(num + " ");
+            }
+            list.Display();
+            Console.Write("\nEnter the value you want to search : ");
+            int searchValue = Convert.ToInt32(Console.ReadLine());
+            list.Search(searchValue);
+            if (list.flag == 0)
+            {
+                Console.WriteLine("Inserting " + searchValue + " in the linked list");
+                list.OrderedList(searchValue);
+            }
+            if (list.flag == 1)
+            {
+                list.DeleteValue(searchValue);
+            }
+            list.Display();
+        }
     }
 }

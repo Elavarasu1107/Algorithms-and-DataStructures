@@ -7,7 +7,7 @@ namespace AlgorithmsAndDataStructures
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter 1 for Permutation of String\n 2 for BinarySearch\n 3 for Insertion Sort\n 4 for Bubble Sort\n 5 for Merge Sort\n 6 for Anagram Checking\n" +
-                " 7 for Unordered List");
+                " 7 for Unordered List\n 8 for Ordered List");
             Console.WriteLine("Enter a Number");
             int userInput = Convert.ToInt32(Console.ReadLine());
 
@@ -59,6 +59,12 @@ namespace AlgorithmsAndDataStructures
                     {
                         DataStructures getMethod = new DataStructures();
                         getMethod.UnorderedList();
+                        break;
+                    }
+                case 8:
+                    {
+                        DataStructures getMethod = new DataStructures();
+                        getMethod.OrderedList();
                         break;
                     }
                 default:

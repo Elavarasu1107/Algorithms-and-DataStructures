@@ -56,7 +56,7 @@ namespace AlgorithmsAndDataStructures
                 }
                 tempHead = tempHead.next;
             }
-            Console.WriteLine("Data " + search + " is deleted from the list\n");
+            Console.WriteLine("Data " + search + " is deleted from the list");
         }
         internal void Search(T search)
         {
@@ -117,7 +117,7 @@ namespace AlgorithmsAndDataStructures
             }
             else
             {
-                Console.WriteLine("Data present in the linked list are : ");
+                Console.WriteLine("\nData after sorting: ");
                 while (tempHead != null)
                 {
                     Console.Write(tempHead.data + " ");
